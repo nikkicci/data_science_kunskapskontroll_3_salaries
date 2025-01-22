@@ -1,0 +1,5 @@
+*.db
+*.log
+.conda
+.venv
+*.code-workspace
