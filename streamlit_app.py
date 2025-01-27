@@ -31,3 +31,8 @@ symbols_price_unit = st.sidebar.selectbox('Select target currency to convert to'
 
 #st.write(df)
 
+with st.expander('Data'):
+  st.write('**Raw data**')
+  df = pd.read_csv('ds_salaries.csv')
+  df
+  
