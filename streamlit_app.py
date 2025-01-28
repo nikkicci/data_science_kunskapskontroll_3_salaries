@@ -21,7 +21,7 @@ def fetch_exchange_rate():
         response = requests.get(url)
         response.raise_for_status()
         payload = json.loads(response.text)
-        return float(payload["rates"]["SEK", "EUR""])
+        return float(payload["rates"]["SEK", "EUR"])
     except Exception as e:
         st.error(f"Error fetching exchange rate: {e}")
         return None
