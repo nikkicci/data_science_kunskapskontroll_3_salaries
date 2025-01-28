@@ -7,7 +7,7 @@ st.write('This is an app for data scientists salaries with analysis and a curren
 st.sidebar.header('Input Options')
 
 ## Sidebar - Currency price unit
-currency_list = ['SEK', 'USD']
+currency_list = ['SEK', 'USD', 'EUR']
 base_price_unit = st.sidebar.selectbox('Select base currency for conversion', currency_list)
 symbols_price_unit = st.sidebar.selectbox('Select target currency to convert to', currency_list)
 
