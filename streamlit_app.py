@@ -15,16 +15,7 @@ except db.Error as e:
 # omvandla valuta från USD till SEK samt skapa ny kolumn och loggfil
 API_KEY = "929ce405b668474ea251cb0f2cb4764b" 
 
-def fetch_exchange_rate():
-    url = f"https://api.currencyfreaks.com/v2.0/rates/latest?apikey={API_KEY}"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        payload = json.loads(response.text)
-        return float(payload["rates"]["SEK", "EUR"])
-    except Exception as e:
-        st.error(f"Error fetching exchange rate: {e}")
-        return None
+
 
 def bail(message):
     logger.error(message)
